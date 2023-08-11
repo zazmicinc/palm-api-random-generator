@@ -1,0 +1,116 @@
+{
+  "name": "palm-api-random-generator",
+  "displayName": "PaLM API Random Generator",
+  "description": "Quickly generate random data, create randomized addresses, numbers, and text strings for testing and development purposes.",
+  "version": "0.0.1",
+  "publisher": "Zazmic",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zazmicinc/palm-api-random-generator.git"
+  },
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#348387",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Machine Learning",
+    "Formatters"
+  ],
+  "keywords": [
+    "random generator",
+    "random data",
+    "data generation",
+    "test data",
+    "development tool",
+    "coding tool",
+    "software testing",
+    "placeholder data",
+    "random numbers",
+    "mock text",
+    "address generation",
+    "development toolkit",
+    "data diversity",
+    "code testing",
+    "data variety"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "palm-api-random-generator.Random",
+          "group": "palm-api-random-generator"
+        }
+      ],
+      "palm-api-random-generator.Random": [
+        {
+          "command": "palm-api-random-generator.Number"
+        },
+        {
+          "command": "palm-api-random-generator.Text"
+        },
+        {
+          "command": "palm-api-random-generator.Name"
+        },
+        {
+          "command": "palm-api-random-generator.PhoneNumber"
+        },
+        {
+          "command": "palm-api-random-generator.Date"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "command": "palm-api-random-generator.Random",
+        "id": "palm-api-random-generator.Random",
+        "label": "Random ..."
+      }
+    ],
+    "commands": [
+      {
+        "command": "palm-api-random-generator.Text",
+        "title": "   Text"
+      },
+      {
+        "command": "palm-api-random-generator.Number",
+        "title": "  Number"
+      },
+      {
+        "command": "palm-api-random-generator.Name",
+        "title": " Name"
+      },
+      {
+        "command": "palm-api-random-generator.PhoneNumber",
+        "title": " Phone Number"
+      },
+      {
+        "command": "palm-api-random-generator.Date",
+        "title": " Date"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.81.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.2.5",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.3",
+    "@vscode/test-electron": "^2.3.2"
+  }
+}
