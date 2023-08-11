@@ -7,7 +7,7 @@ With this extension, you can effortlessly create random numbers and mock texts. 
 ### Random Name Generation
  - easily generate diverse fictional names for your testing and development needs, whether it's for creating mock user profiles, populating databases, or conducting data testing. This functionality enables you to quickly produce realistic-sounding names while maintaining a high degree of randomness.
 
-## To use the PaLM API Code Review extension:
+## To use the PaLM API Random Generator extension:
 
 1. Open the Command Palette or find the command in a context menu.
 2. Search for the "Random..." list of commands and select one of them.
