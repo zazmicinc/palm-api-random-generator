@@ -2,7 +2,7 @@
   "name": "palm-api-random-generator",
   "displayName": "PaLM API Random Generator",
   "description": "Quickly generate random data, create randomized addresses, numbers, and text strings for testing and development purposes.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "Zazmic",
   "license": "MIT",
   "repository": {
@@ -51,19 +51,70 @@
       ],
       "palm-api-random-generator.Random": [
         {
-          "command": "palm-api-random-generator.Number"
+          "submenu": "palm-api-random-generator.Number",
+          "group": "palm-api-random-generator"
         },
         {
-          "command": "palm-api-random-generator.Text"
+          "submenu": "palm-api-random-generator.Date",
+          "group": "palm-api-random-generator.date"
         },
         {
-          "command": "palm-api-random-generator.Name"
+          "submenu": "palm-api-random-generator.Person",
+          "group": "palm-api-random-generator.person"
         },
         {
-          "command": "palm-api-random-generator.PhoneNumber"
+          "submenu": "palm-api-random-generator.Text",
+          "group": "palm-api-random-generator.text"
+        }
+      ],
+      "palm-api-random-generator.Number": [
+        {
+          "command": "palm-api-random-generator.Number.Integer"
         },
         {
-          "command": "palm-api-random-generator.Date"
+          "command": "palm-api-random-generator.Number.Float"
+        }
+      ],
+      "palm-api-random-generator.Date": [
+        {
+          "command": "palm-api-random-generator.Date.Future"
+        },
+        {
+          "command": "palm-api-random-generator.Date.Past"
+        }
+      ],
+      "palm-api-random-generator.Person": [
+        {
+          "command": "palm-api-random-generator.Person.FullName"
+        },
+        {
+          "command": "palm-api-random-generator.Person.FirstName"
+        },
+        {
+          "command": "palm-api-random-generator.Person.LastName"
+        },
+        {
+          "command": "palm-api-random-generator.Person.PhoneNumber"
+        },
+        {
+          "command": "palm-api-random-generator.Person.NickName"
+        }
+      ],
+      "palm-api-random-generator.Text": [
+        {
+          "command": "palm-api-random-generator.Text.AlphaNumeric"
+        },
+        {
+          "command": "palm-api-random-generator.Text.Sentence"
+        },
+        {
+          "command": "palm-api-random-generator.Text.Paragraph"
+        },
+        {
+          "command": "palm-api-random-generator.Text.Quote"
+        },
+        {
+          "command": "palm-api-random-generator.Text.Joke"
         }
       ]
     },
@@ -72,28 +123,84 @@
         "command": "palm-api-random-generator.Random",
         "id": "palm-api-random-generator.Random",
         "label": "Random ..."
+      },
+      {
+        "command": "palm-api-random-generator.Number",
+        "id": "palm-api-random-generator.Number",
+        "label": "Number"
+      },
+      {
+        "command": "palm-api-random-generator.Date",
+        "id": "palm-api-random-generator.Date",
+        "label": "Date"
+      },
+      {
+        "command": "palm-api-random-generator.Person",
+        "id": "palm-api-random-generator.Person",
+        "label": "Person"
+      },
+      {
+        "command": "palm-api-random-generator.Text",
+        "id": "palm-api-random-generator.Text",
+        "label": "Text"
       }
     ],
     "commands": [
       {
-        "command": "palm-api-random-generator.Text",
-        "title": "   Text"
+        "command": "palm-api-random-generator.Number.Integer",
+        "title": "Integer"
       },
       {
-        "command": "palm-api-random-generator.Number",
-        "title": "  Number"
+        "command": "palm-api-random-generator.Number.Float",
+        "title": "Float"
       },
       {
-        "command": "palm-api-random-generator.Name",
-        "title": " Name"
+        "command": "palm-api-random-generator.Person.FullName",
+        "title": "    Full Name"
       },
       {
-        "command": "palm-api-random-generator.PhoneNumber",
-        "title": " Phone Number"
+        "command": "palm-api-random-generator.Person.FirstName",
+        "title": "   First Name"
       },
       {
-        "command": "palm-api-random-generator.Date",
-        "title": " Date"
+        "command": "palm-api-random-generator.Person.LastName",
+        "title": "  Last Name"
+      },
+      {
+        "command": "palm-api-random-generator.Person.PhoneNumber",
+        "title": "Phone Number"
+      },
+      {
+        "command": "palm-api-random-generator.Person.NickName",
+        "title": "Nickname"
+      },
+      {
+        "command": "palm-api-random-generator.Date.Future",
+        "title": "Future"
+      },
+      {
+        "command": "palm-api-random-generator.Date.Past",
+        "title": "Past"
+      },
+      {
+        "command": "palm-api-random-generator.Text.AlphaNumeric",
+        "title": "    Alpha Numeric"
+      },
+      {
+        "command": "palm-api-random-generator.Text.Sentence",
+        "title": "   Sentence"
+      },
+      {
+        "command": "palm-api-random-generator.Text.Paragraph",
+        "title": "  Paragraph"
+      },
+      {
+        "command": "palm-api-random-generator.Text.Quote",
+        "title": " Quote"
+      },
+      {
+        "command": "palm-api-random-generator.Text.Joke",
+        "title": "Joke"
       }
     ]
   },

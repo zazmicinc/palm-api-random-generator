@@ -9,6 +9,10 @@ function randomNumber(length) {
   return randomNumber;
 }
 
+function randomFloat(min, max) {
+  return (Math.random() * (max - min) + min).toString();
+}
+
 function randomText(length) {
   const characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ";
@@ -53,6 +57,7 @@ function randomDate(startDate, endDate) {
 
 module.exports = {
   randomNumber,
+  randomFloat,
   randomText,
   randomLetters,
   randomPhoneNumber,
